@@ -13,7 +13,7 @@ class TaskListAddScreen extends StatelessWidget {
     final formKey = GlobalKey<FormState>();
 
     return Scaffold(
-      appBar: AppBar(title: Text('Editando')),
+      appBar: AppBar(title: Text('Adicionando')),
       body: Container(
         padding: EdgeInsets.symmetric(horizontal: 10),
         child: Column(mainAxisAlignment: MainAxisAlignment.center, children: [

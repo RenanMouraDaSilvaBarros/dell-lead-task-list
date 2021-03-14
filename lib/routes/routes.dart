@@ -1,6 +1,6 @@
-import 'package:dell_lead_task_list/page/task_add_screen.dart';
-import 'package:dell_lead_task_list/page/task_edit_screen.dart';
-import 'package:dell_lead_task_list/page/task_list_screen.dart';
+import 'package:dell_lead_task_list/pages/task_add_screen.dart';
+import 'package:dell_lead_task_list/pages/task_edit_screen.dart';
+import 'package:dell_lead_task_list/pages/task_list_screen.dart';
 import 'package:flutter/material.dart';
 
 class Routes {

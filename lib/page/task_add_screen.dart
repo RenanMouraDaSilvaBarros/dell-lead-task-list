@@ -1,21 +1,16 @@
-import 'package:dell_lead_task_list/controllers/list_task_controller.dart';
-import 'package:dell_lead_task_list/page/task_list_screen.dart';
-import 'package:dell_lead_task_list/utils/vaidation.dart';
+import 'package:dell_lead_task_list/controllers/task_controller.dart';
+import 'package:dell_lead_task_list/utils/validation.dart';
 import 'package:flutter/material.dart';
 
-class TaskListEditScreen extends StatelessWidget {
-  //final _formKey = GlobalKey<FormState>();
-  final int index;
-  final ListTaskController controller;
+class TaskListAddScreen extends StatelessWidget {
+  final TaskController controller;
   final formKey = GlobalKey<FormState>();
-
-  TaskListEditScreen({Key key, this.index, this.controller}) : super(key: key);
+  TaskListAddScreen({Key key, this.controller}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    TextEditingController textController =
-        TextEditingController(text: controller.listTask[index]);
-
+   final textController = TextEditingController();
+   
     return Scaffold(
       appBar: AppBar(title: Text('Editando')),
       body: Container(
@@ -40,11 +35,11 @@ class TaskListEditScreen extends StatelessWidget {
             onPressed: () {
               if (formKey.currentState.validate()) {
                 print("valida");
-                controller.edit(index, textController.text);
+                controller.add(textController.text);
                 Navigator.pop(context);
               }
             },
-            child: Text("Editar tarefa"),
+            child: Text("Adicionar tarefa"),
           )
         ]),
       ),

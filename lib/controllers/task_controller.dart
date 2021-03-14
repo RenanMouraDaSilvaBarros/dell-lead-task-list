@@ -1,9 +1,9 @@
 import 'package:mobx/mobx.dart';
-part 'list_task_controller.g.dart';
+part 'task_controller.g.dart';
 
-class ListTaskController = ListTaskControllerBase with _$ListTaskController;
+class TaskController = TaskControllerBase with _$TaskController;
 
-abstract class ListTaskControllerBase with Store {
+abstract class TaskControllerBase with Store {
   @observable
   ObservableList<String> listTask = ObservableList.of(['fsd','sffsd']);
 

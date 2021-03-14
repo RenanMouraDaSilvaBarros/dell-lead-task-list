@@ -1,4 +1,4 @@
-import 'package:dell_lead_task_list/controllers/list_task_controller.dart';
+import 'package:dell_lead_task_list/controllers/task_controller.dart';
 import 'package:flutter/material.dart';
 
 class ItemList extends StatelessWidget {
@@ -18,7 +18,7 @@ class ItemList extends StatelessWidget {
       this.onRemove})
       : super(key: key);
 
-  final controller = ListTaskController();
+  final controller = TaskController();
   @override
   Widget build(BuildContext context) {
     return Card(

@@ -7,7 +7,7 @@ class ItemList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Card(
-            color: Colors.blue,
+            color: Colors.white,
             child: ListTile(
               title: Row(
                 children: [

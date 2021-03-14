@@ -3,14 +3,13 @@ import 'package:dell_lead_task_list/utils/validation.dart';
 import 'package:flutter/material.dart';
 
 class TaskListAddScreen extends StatelessWidget {
-  final TaskController controller;
-  final formKey = GlobalKey<FormState>();
-  TaskListAddScreen({Key key, this.controller}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-   final textController = TextEditingController();
-   
+    final TaskController controller = TaskController();
+    final textController = TextEditingController();
+    final formKey = GlobalKey<FormState>();
+
     return Scaffold(
       appBar: AppBar(title: Text('Editando')),
       body: Container(

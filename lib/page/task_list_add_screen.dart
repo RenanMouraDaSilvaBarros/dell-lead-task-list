@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
 
-class TaskListContentScreen extends StatelessWidget {
+class TaskListAddScreen extends StatelessWidget {
   //final _formKey = GlobalKey<FormState>();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(),
+      appBar: AppBar(title: Text('Editando')),
       body: Container(
         padding: EdgeInsets.symmetric(horizontal: 10),
         child: Column(mainAxisAlignment: MainAxisAlignment.center, children: [

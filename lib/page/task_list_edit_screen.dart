@@ -1,5 +1,6 @@
 import 'package:dell_lead_task_list/controllers/list_task_controller.dart';
 import 'package:dell_lead_task_list/page/task_list_screen.dart';
+import 'package:dell_lead_task_list/utils/vaidation.dart';
 import 'package:flutter/material.dart';
 
 class TaskListEditScreen extends StatelessWidget {
@@ -31,11 +32,7 @@ class TaskListEditScreen extends StatelessWidget {
                   borderSide: new BorderSide(color: Colors.black, width: 10),
                 ),
               ),
-              validator: (value) {
-                if (value.isEmpty) {
-                  return "campo vazio";
-                }
-              },
+              validator: (value) => taskIsValid(value),
             ),
           ),
           FlatButton(

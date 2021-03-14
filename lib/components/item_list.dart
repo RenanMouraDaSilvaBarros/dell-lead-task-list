@@ -1,5 +1,4 @@
 import 'package:dell_lead_task_list/controllers/list_task_controller.dart';
-import 'package:dell_lead_task_list/page/task_list_add_screen.dart';
 import 'package:flutter/material.dart';
 
 class ItemList extends StatelessWidget {

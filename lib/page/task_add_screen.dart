@@ -3,10 +3,12 @@ import 'package:dell_lead_task_list/utils/validation.dart';
 import 'package:flutter/material.dart';
 
 class TaskListAddScreen extends StatelessWidget {
+  final TaskController taskController;
+
+  const TaskListAddScreen({Key key, this.taskController}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    final TaskController controller = TaskController();
     final textController = TextEditingController();
     final formKey = GlobalKey<FormState>();
 
@@ -33,8 +35,8 @@ class TaskListAddScreen extends StatelessWidget {
             color: Colors.blue,
             onPressed: () {
               if (formKey.currentState.validate()) {
-                print("valida");
-                controller.add(textController.text);
+                print("adicionando");
+                taskController.listTask.add(textController.text);
                 Navigator.pop(context);
               }
             },

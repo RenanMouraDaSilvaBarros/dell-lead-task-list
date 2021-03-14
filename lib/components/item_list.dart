@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 
 class ItemList extends StatelessWidget {
   final String text;
-  final Function() onChange;
+
   final Function() onEdit;
   final Function() onRemove;
 
@@ -13,7 +13,6 @@ class ItemList extends StatelessWidget {
       {Key key,
       this.text,
       this.index,
-      this.onChange,
       this.onEdit,
       this.onRemove})
       : super(key: key);

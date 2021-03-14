@@ -5,7 +5,7 @@ class TaskController = TaskControllerBase with _$TaskController;
 
 abstract class TaskControllerBase with Store {
   @observable
-  ObservableList<String> listTask = ObservableList.of(['fsd','sffsd']);
+  ObservableList<String> listTask = ObservableList.of([]);
 
   @action
   void add(String task) {
@@ -20,6 +20,5 @@ abstract class TaskControllerBase with Store {
   @action
   void edit(int index, String taskUpdate) {
     listTask[index] = taskUpdate;
-    
   }
 }

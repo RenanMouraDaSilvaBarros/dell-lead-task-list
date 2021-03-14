@@ -8,8 +8,8 @@ class Routes {
     final args = settings.arguments;
     final Map<String, dynamic> routes = {
       "TaskList": MaterialPageRoute(builder: (_) => TaskListScreen()),
-      "AddTask": MaterialPageRoute(builder: (_) => TaskListAddScreen()),
-      "EditTask": MaterialPageRoute(builder: (_) => TaskListEditScreen(index: args,)),
+      "AddTask": MaterialPageRoute(builder: (_) => TaskListAddScreen(taskController: args,)),
+      "EditTask": MaterialPageRoute(builder: (_) => TaskListEditScreen(data: args,)),
     };
     if (routes.containsKey(settings.name)) {
       return routes[settings.name];
